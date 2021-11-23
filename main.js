@@ -111,9 +111,11 @@ paper.addEventListener("click", playGame);
 scissors.addEventListener("click", playGame);
 
 function playGame(event) {
-  if (username === "") {
+  if (username === "" || username === document.querySelector("#username") ) {
+    document.querySelector("#alert").innerText = "Please enter a username before playing.";
     return;
   } else {
+    document.querySelector("#alert").innerText = "";
   playerMove = event.target.innerText.toLowerCase();
   computerMove = getComputerMove();
   result = getWinner(playerMove, computerMove);
@@ -131,14 +133,14 @@ function playGame(event) {
 }
 }
 
-//Add a username update listener
-let userInputBox = document.querySelector("#username");
+//Add a username input box listener
 username.addEventListener("keyup", updateUsername)
-const specialChars = /[^a-zA-Z0-9/-]+/g;
 
+//Create a function to update username in line with input box
 function updateUsername (event) {
   username = event.target.value;
-  username = username.replace(/[^a-zA-Z0-9/-]+/, "")
-    console.log("special chars input")
+  //Remove non alphabetical characters from username
+  username = username.replace(/[^a-zA-Z/-]+/, "")
+  //Print out Welcome (username)
   document.querySelector("#welcome-username").innerText = `Welcome ${username}!`
 }

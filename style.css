@@ -6,3 +6,17 @@
   padding: 32px;
   margin: 16px;
 }
+
+#alert {
+  /* color: red; */
+  animation: flash 0.5s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
