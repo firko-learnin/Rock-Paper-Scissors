@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissors!</h1>
+    <hr />
+    <h2>Enter your name:</h2>
+    <div class="username-div">
+    <input id="username" type="text" placeholder="Enter your username">
+    <p>(Max 10 char)</p>
+    </div>
+    <h2 id="welcome-username">Welcome!</h2>
+    <p id="your-move">Your move:</p>
+    <div class="buttons">
+      <button id="rock-button" class="button">Rock</button>
+      <button id="paper-button" class="button">Paper</button>
+      <button id="scissors-button" class="button">Scissors</button>
+    </div>
+    <p id="computer-move">Computer move:</p>
+    <p id="result">Winner of round:</p>
+    <hr />
+    <ul>
+      <li id="games-played">Games played: 0</li>
+      <li id="wins">Wins: 0</li>
+      <li id="losses">Losses: 0</li>
+      <li id="drew">Drew: 0</li>
+    </ul>
+    <script src="main.js"></script>
+  </body>
+</html>
